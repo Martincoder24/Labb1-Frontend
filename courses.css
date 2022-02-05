@@ -1,0 +1,74 @@
+.beach {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgrey;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #2304aa;
+  color: white;
+}
+
+.courses {
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    
+}
+
+.course {
+    position: relative;
+    width: 450px;
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 450px;
+    height: auto;
+    margin: 5px;
+}

@@ -1,0 +1,63 @@
+.beach {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightgrey;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #2304aa;
+  color: white;
+}
+
+.about {
+    padding: 10px;
+    margin: 0 auto 0;
+    margin-top: 50px;
+    width: 75%;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    background-color: darkslategray;
+    opacity: 60%;
+    color:#fff;
+    border: 3px solid #2304aa;
+    border-radius: 5px;
+}
