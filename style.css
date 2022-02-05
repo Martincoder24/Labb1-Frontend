@@ -9,6 +9,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: lightgrey;
+  font-size: 1.25em;
 }
 
 .topnav {
@@ -60,4 +61,5 @@ body {
     color:#fff;
     border: 3px solid #2304aa;
     border-radius: 5px;
+    
 }
