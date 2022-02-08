@@ -194,3 +194,16 @@ border: 10px solid lightgrey;
     height: 35rem;
   }
 }
+@media (max-width: 350px) {
+  .course {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .overlay {
+    width: 100%;
+  }
+}
