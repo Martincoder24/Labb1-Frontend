@@ -93,3 +93,10 @@ body {
   margin-top: 10%;
  font-family: 'Rowdies', cursive;
 }
+
+@media (min-width: 600px) {
+  img {
+    width: 325px;
+    height: 200px;
+  }
+}
