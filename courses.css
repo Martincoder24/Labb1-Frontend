@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 20%;
+    height: 50%;
     position: relative;
 }
 * {
@@ -19,7 +19,9 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
-  position: relative;
+  top:0;
+  position: sticky;
+  z-index: 1;
 }
 
 .topnav #myLinks {
