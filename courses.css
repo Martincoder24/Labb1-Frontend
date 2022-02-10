@@ -1,19 +1,19 @@
 :root {
-  --primary: #C2B280;
-  --secondary: #44A7C4;
+  --primary: #c2b280;
+  --secondary: #44a7c4;
 }
 
 * {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 .beach {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 50%;
-    position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50%;
+  position: relative;
 }
 * {
   margin: 0;
@@ -29,7 +29,7 @@ body {
 .topnav {
   overflow: hidden;
   background-color: #333;
-  top:0;
+  top: 0;
   position: sticky;
   z-index: 1;
 }
@@ -65,63 +65,61 @@ body {
 }
 
 .courses {
-    position: relative;
-    width: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 50vh;
-margin-bottom: 70px;
-    
+  position: relative;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50vh;
+  margin-bottom: 70px;
 }
 
 .course {
-    position: relative;
-    width: 30rem;
-    height: 15rem;
-    display: flex;
-    flex-wrap: wrap;
-    border: 5px solid var(--primary);
-    
+  position: relative;
+  width: 30rem;
+  height: 15rem;
+  display: flex;
+  flex-wrap: wrap;
+  border: 5px solid var(--primary);
 }
 
 img {
-    width: 30rem;
-    height: 15rem;
+  width: 30rem;
+  height: 15rem;
 }
 
 .overlay {
-position: absolute;
-top: 0;
-left: 0;
-width: 30rem;
-height: 15rem;
-color: #fff;
-font-family: 'Quicksand', sans-serif;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-transition: opacity .25s;
-border: 10px solid var(--primary);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30rem;
+  height: 15rem;
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s;
+  border: 10px solid var(--primary);
 }
 .overlay:hover {
-    background-color:rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .overlay:hover .image_description {
-  opacity: 1; 
+  opacity: 1;
 }
-.overlay:hover .image_Title  {
-  opacity: 1;  
+.overlay:hover .image_Title {
+  opacity: 1;
   background-color: none;
 }
 .overlay > * {
   transform: translateY(20px);
-  transition: transform .25s;
+  transition: transform 0.25s;
 }
 .overlay:hover > * {
-    transform: translateY(0);
+  transform: translateY(0);
 }
 
 .image_Title {
@@ -129,7 +127,6 @@ border: 10px solid var(--primary);
   font-weight: bold;
   color: #fff;
   text-shadow: 2px 2px black;
-  
 }
 .image_description {
   font-size: 0.75em;
@@ -157,23 +154,23 @@ border: 10px solid var(--primary);
     display: grid;
     grid-template-columns: 2;
     grid-template-rows: 2;
-}
-.course.one {
-  grid-row: 1;
-  grid-column: 1;
-}
-.course.two {
-  grid-row: 1;
-  grid-column: 2;
-}
-.course.three {
-  grid-row: 2;
-  grid-column: 1;
-}
-.course.four {
-  grid-row: 2;
-  grid-column: 2;
-}
+  }
+  .course.one {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .course.two {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .course.three {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  .course.four {
+    grid-row: 2;
+    grid-column: 2;
+  }
 }
 @media (min-width: 1200px) {
   .course {
@@ -207,17 +204,44 @@ border: 10px solid var(--primary);
     height: 35rem;
   }
 }
-@media (max-width: 350px) {
+
+@media (max-width: 520px){
   .course {
-    width: 100%;
+    width: 25rem;
+    height: 15rem;
   }
 
   img {
-    width: 100%;
+    width: 25rem;
+    height: 15rem;
   }
 
   .overlay {
-    width: 100%;
+    width: 25rem;
+    height: 15rem;
+  }
+  .footer {
+    font-size: 1.25rem;
+  }
+}
+}
+@media (max-width: 375px) {
+  .course {
+    width: 20rem;
+    height: 13rem;
+  }
+
+  img {
+     width: 20rem;
+    height: 13rem;
+  }
+
+  .overlay {
+     width: 20rem;
+    height: 13rem;
+  }
+  .footer {
+    font-size: 1rem;
   }
 }
 .footer {
@@ -228,7 +252,7 @@ border: 10px solid var(--primary);
   bottom: 0;
   width: 100%;
   height: 5vh;
-  font-size: 1,5rem;
+  font-size: 1, 5rem;
   text-align: center;
- font-family: 'Rowdies', cursive;
+  font-family: "Rowdies", cursive;
 }
