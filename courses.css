@@ -224,7 +224,7 @@ img {
     font-size: 1.25rem;
   }
 }
-}
+
 @media (max-width: 375px) {
   .course {
     width: 20rem;
