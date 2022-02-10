@@ -207,18 +207,18 @@ img {
 
 @media (max-width: 520px){
   .course {
-    width: 25rem;
-    height: 15rem;
+    width: 22rem;
+    height: 13rem;
   }
 
   img {
-    width: 25rem;
-    height: 15rem;
+    width: 22rem;
+    height: 13rem;
   }
 
   .overlay {
-    width: 25rem;
-    height: 15rem;
+    width: 22rem;
+    height: 13rem;
   }
   .footer {
     font-size: 1.25rem;
@@ -227,18 +227,18 @@ img {
 
 @media (max-width: 375px) {
   .course {
-    width: 20rem;
-    height: 13rem;
+    width: 18rem;
+    height: 11rem;
   }
 
   img {
-     width: 20rem;
-    height: 13rem;
+     width: 18rem;
+    height: 11rem;
   }
 
   .overlay {
-     width: 20rem;
-    height: 13rem;
+     width: 18rem;
+    height: 11rem;
   }
   .footer {
     font-size: 1rem;
