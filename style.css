@@ -50,9 +50,17 @@ body {
   background: black;
   display: block;
   position: absolute;
+  top: 0;
+  right: 2.20em;
+}
+.topnav a.cart {
+  background: black;
+  display: block;
+  position: absolute;
   right: 0;
   top: 0;
 }
+
 
 .topnav a:hover {
   background-color: #ddd;
