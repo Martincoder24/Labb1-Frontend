@@ -22,11 +22,27 @@
       <div id="myLinks">
         <a href="index.html">Start</a>
         <a href="#courses">Kurser</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#addCourse">Lägg till en ny kurs</a>
       </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
+      <a class="cart" id="cart" onclick="shopCart()">
+        <i class="fa fa-shopping-cart"></i>
+        <span class="cart-counter">0</span>
+      </a>
+    </div>
+    <div id="shopping-menu">
+        <div class="shopping-head" id="total">Total:</div>
+        <ul id="shopping-cart-list">
+          <li>listItem1</li>
+          <li>listItem2</li>
+          <li>listItem3</li>
+          <li>listItem4</li>
+        </ul>
+        <div class="shopping-confirm">
+          <button class="confirm">Köp kurser</button>
+        </div>
     </div>
     <div class="courses">
       <div class="course one">

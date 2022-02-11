@@ -42,7 +42,7 @@ body {
   color: white;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1,5em;
+  font-size: 1em;
   display: block;
 }
 
@@ -59,8 +59,23 @@ body {
   position: absolute;
   right: 0;
   top: 0;
+  border-left: 1px solid #fff;
+  
 }
-
+.topnav .cart-counter {
+  width: 1rem;
+  height: 1rem;
+  background: red;
+  display: flex;
+  position: absolute;
+  right: 10px;
+  top: 26px;
+  font-size: 50%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+}
 
 .topnav a:hover {
   background-color: #ddd;
@@ -115,4 +130,56 @@ background-color: var(--secondary);
     width: 325px;
     height: 200px;
   }
+}
+
+
+#shopping-menu {
+  margin-top: 5px;
+  position: sticky;
+  margin-left: auto;
+  margin-right: 5px;
+  top: 60px;
+  width: 30vw;
+  height: 24vh;
+  background-color: #fff;;
+  padding: .75rem;
+  border-radius: .3rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0.1);
+  display: none;
+  flex-direction: column;
+}
+
+ul {
+  list-style:none;
+}
+
+.shopping-head {
+text-align: right;
+display: flex;
+flex-direction: row;
+justify-content: right;
+}
+.shopping-confirm {
+padding: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#shopping-menu button {
+  width: 14em;
+  height: 2.5em;
+  color: #fff;
+  background-color: lightgreen;
+  border: none;
+  font-size: 1em;
+  
+}
+#shopping-menu button:hover {
+  background-color: rgb(0, 255, 0);
+  border: 1px solid black;
+}
+
+.value-color {
+  color: rgb(61, 185, 226);
 }

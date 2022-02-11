@@ -8,41 +8,63 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Festive&family=Rowdies:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Festive&family=Rowdies:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>WestCoast Education</title>
   </head>
   <body>
     <video class="beach" loop autoplay muted>
       <source src="Videos/Havsvideo.mp4" type="video/mp4" />
-    </video>    
+    </video>
     <!-- Top Navigation Menu -->
     <div class="topnav">
       <a href="#home" class="active">WestCoast Education</a>
       <div id="myLinks">
         <a href="#home">Start</a>
         <a href="courses.html">Kurser</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#addCourse">Lägg till en ny kurs</a>
       </div>
       <a class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
-      <a class="cart">
+      <a class="cart" onclick="shopCart()">
         <i class="fa fa-shopping-cart"></i>
+        <span class="cart-counter">0</span>
       </a>
     </div>
+    
+    <div id="shopping-menu">
+        <div class="shopping-head" id="total">Total:</div>
+        <ul id="shopping-cart-list">
+          <li>listItem1</li>
+          <li>listItem2</li>
+          <li>listItem3</li>
+          <li>listItem4</li>
+        </ul>
+        <div class="shopping-confirm">
+          <button class="confirm">Köp kurser</button>
+        </div>
+        
+      </div>
     <div class="about">
-    <div class="about one">WestCoast Education är ett utbildningscentrum precis utanför Göteborg!</div>
-    <div class="streck"></div>
-    <div class="about two">"40-årig erfarenhet av teknisk utbildning!"</div>
-    <img src="Images/Pluggbild1.jpg" alt="Pluggbild">
-    <div class="about">"Vi har knäckt koden om enkelt lärande!"</div>
-    <img src="Images/datorbild2.jpg" alt="Dator som sprängs">
-    <div class="about three">"Vi har utbildning på plats men även numera chans till distans!"</div>
+      <div class="about one">
+        WestCoast Education är ett utbildningscentrum precis utanför Göteborg!
+      </div>
+      <div class="streck"></div>
+      <div class="about two">"40-årig erfarenhet av teknisk utbildning!"</div>
+      <img src="Images/Pluggbild1.jpg" alt="Pluggbild" />
+      <div class="about">"Vi har knäckt koden om enkelt lärande!"</div>
+      <img src="Images/datorbild2.jpg" alt="pluggbild2" />
+      <div class="about three">
+        "Vi har utbildning på plats men även numera chans till distans!"
+      </div>
     </div>
-<div class="footer">All rights reserved by WestCoast Education</div>
+    <div class="footer">All rights reserved by WestCoast Education</div>
     <script src="script.js"></script>
   </body>
 </html>
