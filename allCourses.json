@@ -1,0 +1,28 @@
+[{"kursNummer":1, 
+ "kursTitel": ".NET-Utveckling",
+ "kursBeskrivning":"Lär dig grunderna i .NET utveckling med C#.",
+ "kursLängd": "20V",
+ "kursPris": 1317,
+ "kursBild":"./Images/Kurs1.jpg"}
+
+,{"kursNummer":2, 
+ "kursTitel": "IT-säkerhet",
+ "kursBeskrivning":"Lär dig grunderna i säkerhet för webbsidor, appar m.m.",
+ "kursLängd": "15V",
+ "kursPris": 3499,
+ "kursBild":"./Images/Kurs2.jpg"}
+,{
+ "kursNummer":3, 
+ "kursTitel": "Frontend",
+ "kursBeskrivning":" Lär dig grunderna i html, css och javascript och bli en webbdesigner.",
+ "kursLängd": "10V",
+ "kursPris": 499,
+ "kursBild":"./Images/Kurs3.jpg"}
+,{
+"kursNummer":4, 
+ "kursTitel": "AI-utvecklare",
+ "kursBeskrivning":"Lär dig grunderna i hur AI fungerar med hjälp av python.",
+ "kursLängd": "17V",
+ "kursPris": 2999,
+ "kursBild":"./Images/Kurs4.jpg"}
+]

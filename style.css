@@ -24,7 +24,7 @@ img {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color:  var(--primary);
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .topnav {
@@ -51,7 +51,7 @@ body {
   display: block;
   position: absolute;
   top: 0;
-  right: 2.20em;
+  right: 2.6em;
 }
 .topnav a.cart {
   background: black;
@@ -122,7 +122,7 @@ background-color: var(--secondary);
   font-size: 1,5rem;
   text-align: center;
   margin-top: 10%;
- font-family: 'Rowdies', cursive;
+  font-family: 'Rowdies', cursive;
 }
 
 @media (min-width: 600px) {
