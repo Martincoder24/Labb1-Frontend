@@ -91,6 +91,7 @@ function addCourseToCart(number) {
     const p1 = document.createElement("p");
     p1.innerText = currentCourse.kursTitel;
     const p2 = document.createElement("p");
+    p2.classList.add("value-color")
     p2.innerText = `${currentCourse.kursPris} kr`;
     const a = document.createElement("a");
     a.setAttribute("onclick", `removeCourseFromCart(${number})`);
