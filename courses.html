@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Festive&family=Rowdies:wght@300&display=swap" rel="stylesheet">
      <link rel="stylesheet" href="courses.css" />
     <title>WestCoast Education - Kurser</title>
@@ -29,16 +27,13 @@
       </a>
       <a class="cart" id="cart" onclick="shopCart()">
         <i class="fa fa-shopping-cart"></i>
-        <span class="cart-counter">0</span>
+        <span class="cart-counter" id="cart-counter"></span>
       </a>
     </div>
     <div id="shopping-menu">
         <div class="shopping-head" id="total">Total:</div>
         <ul id="shopping-cart-list">
-          <li>listItem1</li>
-          <li>listItem2</li>
-          <li>listItem3</li>
-          <li>listItem4</li>
+          <p id="empty">Din kundvagn är tom!</p>
         </ul>
         <div class="shopping-confirm">
           <button class="confirm">Köp kurser</button>

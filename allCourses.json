@@ -1,4 +1,5 @@
-[{"kursNummer":1, 
+[{
+ "kursNummer":1, 
  "kursTitel": ".NET-Utveckling",
  "kursBeskrivning":"Lär dig grunderna i .NET utveckling med C#.",
  "kursLängd": "20V",
@@ -19,7 +20,7 @@
  "kursPris": 499,
  "kursBild":"./Images/Kurs3.jpg"}
 ,{
-"kursNummer":4, 
+ "kursNummer":4, 
  "kursTitel": "AI-utvecklare",
  "kursBeskrivning":"Lär dig grunderna i hur AI fungerar med hjälp av python.",
  "kursLängd": "17V",
