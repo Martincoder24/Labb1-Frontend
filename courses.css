@@ -42,6 +42,7 @@ body {
   text-decoration: none;
   font-size: 1em;
   display: block;
+  cursor: pointer;
 }
 
 .topnav a.icon {
@@ -289,6 +290,11 @@ img {
     width: 5em;
     height: 2.5em;
   }
+  .new-course {
+    width: 90%;
+    height: 90%
+  }
+  
 }
 @media (max-width: 375px) {
   .course {
@@ -411,4 +417,63 @@ font-size: larger;
   justify-content: center;
   text-align: center;
   width: 100%;
+}
+/*Här är modalen för att lägga till en ny kurs*/
+.modal-new {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height: 110vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  height: auto;
+  height: auto;
+  font-size: 1rem;
+}
+form .image-container {
+  display: flex;
+  justify-content: space-around;
+}
+.new-course {
+  position: relative;
+  background-color: #fff;
+  max-width: 500px;
+  width: 70%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-radius: 10px;
+  
+}
+.modal-new .close {
+  position: absolute;
+  top:7px;
+  right: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.5rem;
+  
+  
+}
+.modal-new button {
+  cursor: pointer;
+  margin-top: 1rem;
+  
 }

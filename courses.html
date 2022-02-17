@@ -20,9 +20,9 @@
       <div id="myLinks">
         <a href="index.html">Start</a>
         <a href="#courses">Aktuella kurser</a>
-        <a href="#addCourse">Lägg till en ny kurs</a>
+        <a onclick="openModal()">Lägg till en ny kurs</a>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <a href="javascript:void(0);" class="icon" onclick="openMenu()">
         <i class="fa fa-bars"></i>
       </a>
       <a class="cart" id="cart" onclick="shopCart()">
@@ -40,6 +40,27 @@
         </div>
     </div>
     <div class="courses" id="course-container"></div>
+    <div class="modal-new" id="modal-new">
+      <div class="new-course">
+        <h2>Lägga till en ny kurs</h2>
+        <form onsubmit="return false;">
+        <label for="kursnummer">Kursnummer: </label>
+        <input type="number" name="kursnummer" id="course-number">
+        <label for="kurstitel">Kurstitel: </label>
+        <input type="text" name="kurstitel" id="course-title">
+        <label for="kursbeskrivning">Kursbeskrivning: </label>
+        <input type="text" name="kursbeskrivning" id="course-description">
+        <label for="kurslängd">Kurslängd: </label>
+        <input type="text" name="kurslängd" id="course-length">
+        <label for="kurspris">Kurspris: </label>
+        <input type="number" name="kurspris" id="course-price">
+        <label for="img">Kursbild: </label>
+        <input type="text" name="kursbild" id="course-image">
+        <button onclick="addCourse()">Skapa kurs</button>
+        <span class="close" onclick="openModal()">X</span>
+        </form>
+      </div>
+    </div>
 <div class="footer">All rights reserved by WestCoast Education</div>
   
     <script src="script.js"></script>
