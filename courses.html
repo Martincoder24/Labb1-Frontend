@@ -50,11 +50,11 @@
         <input type="text" name="kurstitel" id="course-title">
         <label for="kursbeskrivning">Kursbeskrivning: </label>
         <input type="text" name="kursbeskrivning" id="course-description">
-        <label for="kurslängd">Kurslängd: </label>
-        <input type="text" name="kurslängd" id="course-length">
-        <label for="kurspris">Kurspris: </label>
+        <label for="kurslängd">Kurslängd: (Antal veckor)</label>
+        <input type="number" name="kurslängd" id="course-length">
+        <label for="kurspris">Kurspris: (i kronor)</label>
         <input type="number" name="kurspris" id="course-price">
-        <label for="img">Kursbild: </label>
+        <label for="img">Kursbild:(Skriv in URL-länk) </label>
         <input type="text" name="kursbild" id="course-image">
         <button onclick="addCourse()">Skapa kurs</button>
         <span class="close" onclick="openModal()">X</span>

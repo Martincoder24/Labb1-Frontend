@@ -45,7 +45,7 @@ function getCourses() {
     const a = document.createElement("a");
     a.classList.add("add-btn");
     a.setAttribute("onclick", `addCourseToCart(${course.kursNummer})`);
-    a.innerText = "Köp";
+    a.innerText = "Lägg till";
     div1.appendChild(img);
     div1.appendChild(div2);
     div2.appendChild(div3);
@@ -54,7 +54,6 @@ function getCourses() {
     courseContainer.appendChild(div1);
   }
 }
-
 
 
 function openMenu() {
@@ -179,7 +178,7 @@ function addCourse() {
     kursNummer: Number(document.getElementById("course-number").value),
     kursTitel: document.getElementById("course-title").value,
     kursBeskrivning: document.getElementById("course-description").value,
-    kursLängd: document.getElementById("course-length").value,
+    kursLängd: Number(document.getElementById("course-length").value),
     kursPris: Number(document.getElementById("course-price").value),
     kursBild: checkImage ? document.getElementById("course-image").value : "./Images/Defaultbild.png"
   };
