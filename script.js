@@ -24,7 +24,7 @@ fetch("./allCourses.json")
     }
     getCourses();
   });
-  
+
 function getCourses() {
   const courseContainer = document.getElementById("course-container");
   courseContainer.innerHTML = "";
@@ -54,7 +54,6 @@ function getCourses() {
     courseContainer.appendChild(div1);
   }
 }
-
 
 function openMenu() {
   var x = document.getElementById("myLinks");
@@ -88,19 +87,19 @@ function addToCartTotal(number) {
 function addCourseToCart(number) {
   if (!cart.includes(number)) {
     cart.push(number);
-    emptyCart(); 
+    emptyCart();
     //Här måste jag lägga till <li> i min kundvagn
     const cartList = document.getElementById("shopping-cart-list");
     let currentCourse = courses.find((obj) => obj.kursNummer === number);
     const li = document.createElement("li");
-    li.setAttribute("id", `${number}`)
+    li.setAttribute("id", `${number}`);
     const img = document.createElement("img");
     img.src = currentCourse.kursBild;
     const div = document.createElement("div");
     const p1 = document.createElement("p");
     p1.innerText = currentCourse.kursTitel;
     const p2 = document.createElement("p");
-    p2.classList.add("value-color")
+    p2.classList.add("value-color");
     p2.innerText = `${currentCourse.kursPris} kr`;
     const a = document.createElement("a");
     a.setAttribute("onclick", `removeCourseFromCart(${number})`);
@@ -126,26 +125,25 @@ function addCourseToCart(number) {
 
 function removeCourseFromCart(number) {
   const cartList = document.getElementById("shopping-cart-list");
-  let li = document.getElementById(`${number}`)
+  let li = document.getElementById(`${number}`);
   cartList.removeChild(li);
   total -= addToCartTotal(number);
   updateTotal();
   cartCounter--;
   updateCounter();
   for (let i = 0; i < cart.length; i++) {
-    if(cart[i] === number){
+    if (cart[i] === number) {
       cart.splice(i, 1);
-      emptyCart(); 
-      return
+      emptyCart();
+      return;
     }
   }
-  
 }
 
-function updateCounter(){  
+function updateCounter() {
   const counter = document.getElementById("cart-counter");
   counter.innerHTML = `<span>${cartCounter}</span>`;
-  if(cartCounter > 0){
+  if (cartCounter > 0) {
     counter.style.opacity = 1;
   } else {
     counter.style.opacity = 0;
@@ -154,18 +152,17 @@ function updateCounter(){
 
 function emptyCart() {
   const p = document.getElementById("empty");
-  if(cart.length === 0){
+  if (cart.length === 0) {
     p.style.display = "flex";
   } else {
     p.style.display = "none";
   }
-  
 }
 //Öppna,stänga samt resetta modalen.
-function openModal () {
+function openModal() {
   document.querySelector("form").reset();
   const modal = document.getElementById("modal-new");
-  if(modal.style.visibility === "visible"){
+  if (modal.style.visibility === "visible") {
     modal.style.visibility = "hidden";
   } else {
     modal.style.visibility = "visible";
@@ -173,43 +170,44 @@ function openModal () {
 }
 
 function addCourse() {
-  let checkImage = !document.getElementById("course-image").value.length == 0
-    const newCourse = {
+  let checkImage = !document.getElementById("course-image").value.length == 0;
+  const newCourse = {
     kursNummer: Number(document.getElementById("course-number").value),
     kursTitel: document.getElementById("course-title").value,
     kursBeskrivning: document.getElementById("course-description").value,
     kursLängd: Number(document.getElementById("course-length").value),
     kursPris: Number(document.getElementById("course-price").value),
-    kursBild: checkImage ? document.getElementById("course-image").value : "./Images/Defaultbild.png"
+    kursBild: checkImage
+      ? document.getElementById("course-image").value
+      : "./Images/Defaultbild.png",
   };
-  courses.push(new Course (newCourse));
+  courses.push(new Course(newCourse));
   getCourses();
   openModal();
 }
 // När man bekräftar köpet ska det komma en popup som säger att du har köpt dina kurser
 //CLearar vagnen samt kurserna
 function confirm() {
-proceed();
-cart.length = 0;
-total = 0;
-updateTotal();
-cartcounter = 0;
-updateCounter();
-const cartList = document.getElementById("shopping-cart-list");
-cartList.innerHTML = "";
-const p = document.createElement("p");
-p.setAttribute("id", "empty");
-cartList.appendChild(p);
-const empty = document.getElementById("empty")
-empty.innerText = "Din kundvagn är tom!";
-
+  proceed();
+  cart.length = 0;
+  total = 0;
+  updateTotal();
+  cartcounter = 0;
+  updateCounter();
+  const cartList = document.getElementById("shopping-cart-list");
+  cartList.innerHTML = "";
+  const p = document.createElement("p");
+  p.setAttribute("id", "empty");
+  cartList.appendChild(p);
+  const empty = document.getElementById("empty");
+  empty.innerText = "Din kundvagn är tom!";
 }
 
 function proceed() {
-    const confirm = document.getElementById("confirm-purchase");
-    if (confirm.style.visibility === "visible") {
-      confirm.style.visibility = "hidden";
-    } else {
-      confirm.style.visibility = "visible";
-    }
+  const confirm = document.getElementById("confirm-purchase");
+  if (confirm.style.visibility === "visible") {
+    confirm.style.visibility = "hidden";
+  } else {
+    confirm.style.visibility = "visible";
+  }
 }
