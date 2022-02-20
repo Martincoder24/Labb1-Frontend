@@ -186,3 +186,30 @@ function addCourse() {
   getCourses();
   openModal();
 }
+// När man bekräftar köpet ska det komma en popup som säger att du har köpt dina kurser
+//CLearar vagnen samt kurserna
+function confirm() {
+proceed();
+cart.length = 0;
+total = 0;
+updateTotal();
+cartcounter = 0;
+updateCounter();
+const cartList = document.getElementById("shopping-cart-list");
+cartList.innerHTML = "";
+const p = document.createElement("p");
+p.setAttribute("id", "empty");
+cartList.appendChild(p);
+const empty = document.getElementById("empty")
+empty.innerText = "Din kundvagn är tom!";
+
+}
+
+function proceed() {
+    const confirm = document.getElementById("confirm-purchase");
+    if (confirm.style.visibility === "visible") {
+      confirm.style.visibility = "hidden";
+    } else {
+      confirm.style.visibility = "visible";
+    }
+}

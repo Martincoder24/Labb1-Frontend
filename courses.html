@@ -36,8 +36,14 @@
           <p id="empty">Din kundvagn är tom!</p>
         </ul>
         <div class="shopping-confirm">
-          <button class="confirm">Köp kurser</button>
+          <button onclick="confirm()">Köp kurser</button>
         </div>
+    </div>
+    <div class="confirm-purchase" id="confirm-purchase">
+      <div class="box">
+        <p>Bekräftat köp!</p>
+        <button class="buy-btn" onclick="proceed()">Fortsätt</button>
+      </div>
     </div>
     <div class="courses" id="course-container"></div>
     <div class="modal-new" id="modal-new">
