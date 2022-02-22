@@ -51,15 +51,15 @@
         <h2>Lägga till en ny kurs</h2>
         <form onsubmit="return false;">
         <label for="kursnummer">Kursnummer: </label>
-        <input type="number" name="kursnummer" id="course-number" >
+        <input type="number" name="kursnummer" id="course-number" required>
         <label for="kurstitel">Kurstitel: </label>
-        <input type="text" name="kurstitel" id="course-title" >
+        <input type="text" name="kurstitel" id="course-title" required>
         <label for="kursbeskrivning">Kursbeskrivning: </label>
-        <input type="text" name="kursbeskrivning" id="course-description" >
+        <input type="text" name="kursbeskrivning" id="course-description" required>
         <label for="kurslängd">Kurslängd: (Antal veckor)</label>
-        <input type="number" name="kurslängd" id="course-length" >
+        <input type="number" name="kurslängd" id="course-length" required>
         <label for="kurspris">Kurspris: (i kronor)</label>
-        <input type="number" name="kurspris" id="course-price">
+        <input type="number" name="kurspris" id="course-price" required>
         <label for="img">Kursbild:(Skriv in URL-länk) </label>
         <input type="text" name="kursbild" id="course-image">
         <button onclick="addCourse()">Skapa kurs</button>

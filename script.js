@@ -42,6 +42,9 @@ function getCourses() {
     const p = document.createElement("p");
     p.classList.add("image_description");
     p.innerText = course.kursBeskrivning;
+    const p1 = document.createElement("p");
+    p1.classList.add("length-price");
+    p1.innerText = `${course.kursLängd}V - ${course.kursPris} kr`
     const a = document.createElement("a");
     a.classList.add("add-btn");
     a.setAttribute("onclick", `addCourseToCart(${course.kursNummer})`);
@@ -49,8 +52,9 @@ function getCourses() {
     div1.appendChild(img);
     div1.appendChild(div2);
     div2.appendChild(div3);
-    div2.appendChild(p);
+    div2.appendChild(p);    
     div2.appendChild(a);
+    div2.appendChild(p1);
     courseContainer.appendChild(div1);
   }
 }
@@ -173,6 +177,10 @@ function addCourse() {
   let checkImage = !document.getElementById("course-image").value.length == 0;
   //Måste kontrollera så att jag inte väljer ett befintligt kursNummer
   let checkCourseNumber = Number(document.getElementById("course-number").value);
+  console.log(checkCourseNumber.length)
+  if (checkCourseNumber = 'undefined'){
+    return;
+  }
   let courseNumberIsTaken = false;
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].kursNummer === checkCourseNumber) {
@@ -185,7 +193,7 @@ function addCourse() {
   };
   //kursNummer får inte vara = med nåt kursNummer i courses object arrayen
   const newCourse = {
-    kursNummer: Number(document.getElementById("course-number").value),
+    kursNummer: checkCourseNumber,
     kursTitel: document.getElementById("course-title").value,
     kursBeskrivning: document.getElementById("course-description").value,
     kursLängd: Number(document.getElementById("course-length").value),

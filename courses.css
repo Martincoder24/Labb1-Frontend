@@ -148,6 +148,9 @@ img {
 .overlay:hover .add-btn {
   opacity: 1;
 }
+.overlay:hover .length-price {
+  opacity: 1;
+}
 .image-Title {
   font-size: 2rem;
   font-weight: bold;
@@ -159,6 +162,11 @@ img {
   opacity: 0;
   text-align: center;
   width: 75%;
+}
+.length-price {
+  opacity: 0;
+  margin-right: 5rem;
+  font-size: 1.25em;
 }
 .add-btn {
   width: 4em;
