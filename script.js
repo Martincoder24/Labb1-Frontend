@@ -171,6 +171,19 @@ function openModal() {
 
 function addCourse() {
   let checkImage = !document.getElementById("course-image").value.length == 0;
+  //Måste kontrollera så att jag inte väljer ett befintligt kursNummer
+  let checkCourseNumber = Number(document.getElementById("course-number").value);
+  let courseNumberIsTaken = false;
+  for (let i = 0; i < courses.length; i++) {
+    if (courses[i].kursNummer === checkCourseNumber) {
+      window.alert(
+        "Din nya kurs kan inte ha samma Kursnummer som en befintlig kurs!"
+      );
+      courseNumberIsTaken = true;
+      return;
+    }
+  };
+  //kursNummer får inte vara = med nåt kursNummer i courses object arrayen
   const newCourse = {
     kursNummer: Number(document.getElementById("course-number").value),
     kursTitel: document.getElementById("course-title").value,
@@ -181,26 +194,34 @@ function addCourse() {
       ? document.getElementById("course-image").value
       : "./Images/Defaultbild.png",
   };
-  courses.push(new Course(newCourse));
-  getCourses();
-  openModal();
+  if(!courseNumberIsTaken){
+      courses.push(new Course(newCourse));
+      getCourses();
+      openModal();
+  }
+  
 }
 // När man bekräftar köpet ska det komma en popup som säger att du har köpt dina kurser
 //CLearar vagnen samt kurserna
 function confirm() {
-  proceed();
-  cart.length = 0;
-  total = 0;
-  updateTotal();
-  cartcounter = 0;
-  updateCounter();
-  const cartList = document.getElementById("shopping-cart-list");
-  cartList.innerHTML = "";
-  const p = document.createElement("p");
-  p.setAttribute("id", "empty");
-  cartList.appendChild(p);
-  const empty = document.getElementById("empty");
-  empty.innerText = "Din kundvagn är tom!";
+  if(cart.length >> 0){
+      proceed();
+      cart.length = 0;
+      total = 0;
+      updateTotal();
+      cartCounter = 0;
+      updateCounter();
+      const cartList = document.getElementById("shopping-cart-list");
+      cartList.innerHTML = "";
+      const p = document.createElement("p");
+      p.setAttribute("id", "empty");
+      cartList.appendChild(p);
+      const empty = document.getElementById("empty");
+      empty.innerText = "Din kundvagn är tom!";
+  } else {
+    window.alert("Din kundvagn är tom!")
+  }
+  
 }
 
 function proceed() {
