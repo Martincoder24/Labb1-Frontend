@@ -42,6 +42,8 @@ function getCourses() {
     const p = document.createElement("p");
     p.classList.add("image_description");
     p.innerText = course.kursBeskrivning;
+    const div4 = document.createElement("div");
+    div4.classList.add("third-section");
     const p1 = document.createElement("p");
     p1.classList.add("length-price");
     p1.innerText = `${course.kursLängd}V - ${course.kursPris} kr`
@@ -52,9 +54,10 @@ function getCourses() {
     div1.appendChild(img);
     div1.appendChild(div2);
     div2.appendChild(div3);
-    div2.appendChild(p);    
-    div2.appendChild(a);
-    div2.appendChild(p1);
+    div2.appendChild(p); 
+    div2.appendChild(div4); 
+    div4.appendChild(p1);
+    div4.appendChild(a);
     courseContainer.appendChild(div1);
   }
 }

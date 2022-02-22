@@ -148,7 +148,7 @@ img {
 .overlay:hover .add-btn {
   opacity: 1;
 }
-.overlay:hover .length-price {
+.overlay:hover .third-section {
   opacity: 1;
 }
 .image-Title {
@@ -163,9 +163,14 @@ img {
   text-align: center;
   width: 75%;
 }
-.length-price {
+.third-section {
   opacity: 0;
-  margin-right: 5rem;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.length-price {
   font-size: 1.25em;
 }
 .add-btn {
