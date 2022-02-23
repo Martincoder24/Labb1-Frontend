@@ -34,6 +34,7 @@ function getCourses() {
     div1.classList.add("course");
     const img = document.createElement("img");
     img.src = course.kursBild;
+    img.setAttribute("alt" , `${course.kursTitel}`)
     const div2 = document.createElement("div");
     div2.classList.add("overlay");
     const div3 = document.createElement("div");
