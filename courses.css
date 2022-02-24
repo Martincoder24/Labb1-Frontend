@@ -178,7 +178,7 @@ img {
   font-size: 0.75em;
   opacity: 0;
   text-align: center;
-  width: 75%;
+  width: 80%;
 }
 .third-section {
   opacity: 0;
@@ -190,6 +190,8 @@ img {
 .length-price {
   font-size: 0.75em;
   font-style: italic;
+  color: lightgreen;
+  text-shadow: 2px 2px green;
 }
 .add-btn {
   width: 4em;
