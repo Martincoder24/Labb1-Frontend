@@ -188,7 +188,8 @@ img {
   align-items: center;
 }
 .length-price {
-  font-size: 1.25em;
+  font-size: 0.75em;
+  font-style: italic;
 }
 .add-btn {
   width: 4em;
@@ -231,10 +232,10 @@ img {
 
   .add-btn {
     font-size: 1.5em;
-    width: 6em;
-    height: 3em;
-    margin-top: 10%;
+    width: 5em;
+    height: 2.5em;
   }
+  
 }
 @media (min-width: 1200px) {
   .course {
@@ -257,14 +258,20 @@ img {
     height: 3em;
     margin-top: 15%;
   }
+  .course .overlay .third-section .length-price {
+    font-size: 1.5em;
+  }
 }
 @media (min-width: 1550px) {
   .course {
     width: 55rem;
     height: 35rem;
-    font-size: 6em;
+    font-size: 2em;
   }
-
+  .course .overlay .image-Title {
+    font-size: 2.5em;
+  }
+  
   img {
     width: 55rem;
     height: 35rem;
@@ -283,8 +290,11 @@ img {
     font-size: 1.25em;
     width: 5em;
     height: 2.5em;
-    margin-top: 7%;
   }
+  .course .overlay .third-section .length-price {
+    font-size: 1.5em;
+  }
+  
 }
 @media (max-width: 520px){
   .course {
@@ -336,6 +346,7 @@ img {
   .footer {
     font-size: 1rem;
   }
+  
 }
 .footer {
   background-color: var(--secondary);
@@ -360,6 +371,7 @@ img {
   margin-right: 5px;
   top: 60px;
   width: 45vw;
+  min-width: 350px;
   height: auto;
   background-color: #fff;;
   padding: .75rem;

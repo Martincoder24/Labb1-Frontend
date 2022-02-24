@@ -35,7 +35,7 @@
         <span class="cart-counter" id="cart-counter"></span>
       </a>
     </div>
-    <div id="shopping-menu">
+    <div id="shopping-menu" class="shopping-menu">
         <div class="shopping-head" id="total">Total:</div>
         <ul id="shopping-cart-list">
           <p id="empty">Din kundvagn är tom!</p>
@@ -56,15 +56,15 @@
         <h2>Lägga till en ny kurs</h2>
         <form onsubmit="return false;">
         <label for="kursnummer">Kursnummer: </label>
-        <input type="number" name="kursnummer" id="course-number" required>
+        <input type="number" name="kursnummer" id="course-number" >
         <label for="kurstitel">Kurstitel: </label>
-        <input type="text" name="kurstitel" id="course-title" required>
+        <input type="text" name="kurstitel" id="course-title" >
         <label for="kursbeskrivning">Kursbeskrivning: </label>
-        <input type="text" name="kursbeskrivning" id="course-description" required>
+        <input type="text" name="kursbeskrivning" id="course-description" >
         <label for="kurslängd">Kurslängd: (Antal veckor)</label>
-        <input type="number" name="kurslängd" id="course-length" required>
+        <input type="number" name="kurslängd" id="course-length" >
         <label for="kurspris">Kurspris: (i kronor)</label>
-        <input type="number" name="kurspris" id="course-price" required>
+        <input type="number" name="kurspris" id="course-price" >
         <label for="img">Kursbild:(Skriv in URL-länk) </label>
         <input type="text" name="kursbild" id="course-image">
         <button onclick="addCourse()">Skapa kurs</button>

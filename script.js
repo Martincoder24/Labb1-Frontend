@@ -157,7 +157,7 @@ function updateCounter() {
     counter.style.opacity = 0;
   }
 }
-
+//När jag tömmer min vagn måste jag lägga till <p>-taggen igen.
 function emptyCart() {
   const p = document.getElementById("empty");
   if (cart.length === 0) {
@@ -181,10 +181,17 @@ function addCourse() {
   let checkImage = !document.getElementById("course-image").value.length == 0;
   //Måste kontrollera så att jag inte väljer ett befintligt kursNummer
   let checkCourseNumber = Number(document.getElementById("course-number").value);
-  console.log(checkCourseNumber.length)
-  if (checkCourseNumber = 'undefined'){
+  let checkCourseTitle = document.getElementById("course-title").value;
+  let checkCourseDescription = document.getElementById("course-description").value;
+  let checkCourseLength = Number(document.getElementById("course-length").value);
+  let checkCoursePrice = Number(document.getElementById("course-price").value);
+
+  
+  if (checkCourseNumber === 0){
+    window.alert("Du måste fylla i ett kursnummer")
     return;
   }
+  
   let courseNumberIsTaken = false;
   for (let i = 0; i < courses.length; i++) {
     if (courses[i].kursNummer === checkCourseNumber) {
@@ -195,6 +202,24 @@ function addCourse() {
       return;
     }
   };
+  //Kontrollerar ifall de andra fälten är tomma
+  console.log(checkCourseTitle)
+  if (checkCourseTitle === "") {
+    window.alert("Du måste fylla i en kurstitel");
+    return;
+  }
+  if (checkCourseDescription === "") {
+    window.alert("Du måste fylla i en kursbeskrivning");
+    return;
+  }
+  if (checkCourseLength === 0) {
+    window.alert("Du måste fylla i en kurslängd");
+    return;
+  }
+  if (checkCoursePrice === 0) {
+    window.alert("Du måste fylla i ett kurspris");
+    return;
+  }
   //kursNummer får inte vara = med nåt kursNummer i courses object arrayen
   const newCourse = {
     kursNummer: checkCourseNumber,
@@ -206,7 +231,7 @@ function addCourse() {
       ? document.getElementById("course-image").value
       : "./Images/Defaultbild.png",
   };
-  if(!courseNumberIsTaken){
+  if(courseNumberIsTaken === false){
       courses.push(new Course(newCourse));
       getCourses();
       openModal();
@@ -244,3 +269,4 @@ function proceed() {
     confirm.style.visibility = "visible";
   }
 }
+//Måste kolla ifall alla fält är ifyllda

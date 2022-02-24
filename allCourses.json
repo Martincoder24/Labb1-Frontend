@@ -15,7 +15,7 @@
 ,{
  "kursNummer":3, 
  "kursTitel": "Frontend",
- "kursBeskrivning":" Lär dig grunderna i html, css och javascript och bli en webbdesigner.",
+ "kursBeskrivning":" Lär dig grunderna i html, css och javascript.",
  "kursLängd": 10,
  "kursPris": 499,
  "kursBild":"./Images/Kurs3.jpg"}
